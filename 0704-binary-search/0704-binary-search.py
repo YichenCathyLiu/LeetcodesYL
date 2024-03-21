@@ -5,17 +5,18 @@ class Solution(object):
         :type target: int
         :rtype: int
         """
-        left = 0
-        right = len(nums) - 1
+        # 注意这个nums数组已经是没有重复数字而且升序的
 
-        while left <= right:
-            middle = (left + right) // 2  # 使用整数除法
+        left = 0
+        right = len(nums)-1
+
+        while (left<=right):
+            middle = left+(right-left)//2 # 整数除法自动去除小数部分
             if nums[middle] < target:
                 left = middle + 1
             elif nums[middle] > target:
                 right = middle - 1
             else:
-                return middle
+                return middle # found it!
 
-        # 没找到目标值
-        return -1
+        return -1 # 没找到
