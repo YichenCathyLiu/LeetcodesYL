@@ -4,8 +4,7 @@ class Solution(object):
         :type s: str
         :rtype: str
         """
-        # split words
-        words = s.split()
-        #print(words)
-        # reverse the order of words
-        return ' '.join(words[::-1])
+        lst = s.split()
+        # print(lst)
+        lst = lst[::-1]
+        return ' '.join(lst)
