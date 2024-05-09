@@ -5,9 +5,9 @@ class Solution(object):
         :type t: str
         :rtype: bool
         """
-        p = zip(s,t)
-
-        if len(set(p)) == len(set(s)) == len(set(t)):
+        dic = zip(s,t)
+        print(dic)
+        if len(set(dic)) == len(set(s)) == len(set(t)):
             return True
         else:
             return False
